@@ -1,0 +1,147 @@
+.productIdContainer {
+  width: 80%;
+  margin: 0 auto;
+}
+
+.error {
+  padding: 100px 0;
+}
+.error__title {
+  padding-bottom: 30px;
+  text-align: center;
+  font-size: 37px;
+  font-weight: 700;
+}
+.error__description {
+  margin: 0 auto;
+  max-width: 550px;
+  text-align: center;
+  font-size: 20px;
+  color: #000000;
+  opacity: 0.6;
+}
+
+.loader {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 50vh;
+}
+
+.productId {
+  display: flex;
+  gap: 0 100px;
+}
+.productId__col1 {
+  flex: 0 0 30%;
+  display: flex;
+  flex-direction: column;
+}
+.productId__col2 {
+  display: flex;
+  flex-direction: column;
+}
+.productId__img {
+  flex: 1 1 100%;
+  margin: 0 auto;
+  position: relative;
+  width: 350px;
+  height: 350px;
+}
+.productId__img img {
+  width: 100%;
+  height: 100%;
+  top: 0;
+  left: 0;
+  object-fit: cover;
+}
+.productId__title {
+  padding-bottom: 30px;
+  font-size: 50px;
+  font-weight: 600;
+}
+.productId__characteristicsList {
+  flex: 0 1 100%;
+  display: flex;
+  flex-direction: column;
+  gap: 5px 0;
+  padding-bottom: 20px;
+}
+.productId__characteristicItem {
+  font-size: 20px;
+  color: black;
+  opacity: 0.6;
+}
+.productId__button {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.productId__price {
+  white-space: nowrap;
+  font-size: 25px;
+  font-weight: 600;
+}
+
+.backButton {
+  padding-top: 30px;
+  display: flex;
+  justify-content: center;
+}
+
+@media (max-width: 1200px) {
+  .productId {
+    gap: 0 30px;
+  }
+  .productId__col1 {
+    padding-bottom: 30px;
+    margin: 0 auto;
+  }
+  .productId__img {
+    max-height: 350px;
+    margin-bottom: 15px;
+  }
+  .productId__title {
+    font-size: 38px;
+  }
+  .productId__characteristicItem {
+    font-size: 16px;
+  }
+}
+@media (max-width: 900px) {
+  .productId {
+    flex-direction: column;
+  }
+  .productId__title {
+    text-align: center;
+  }
+  .productId__characteristicItem {
+    text-align: center;
+  }
+}
+@media (max-width: 700px) {
+  .productId__title {
+    font-size: 36px;
+  }
+  .productId__characteristicItem {
+    font-size: 14px;
+  }
+  .productId__button {
+    flex-direction: column;
+    gap: 20px 0;
+  }
+  .backButton {
+    padding-top: 60px;
+  }
+}
+@media (max-width: 450px) {
+  .productId__img {
+    width: 260px;
+    height: 260px;
+  }
+  .productId__price {
+    font-size: 22px;
+  }
+}
+
+/*# sourceMappingURL=ProductId.module.css.map */

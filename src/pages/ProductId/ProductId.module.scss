@@ -1,0 +1,178 @@
+@import '../../MainStyles/variables';
+
+.productIdContainer {
+  width: 80%;
+  margin: 0 auto;
+}
+
+.error {
+  padding: 100px 0;
+
+  &__title {
+    padding-bottom: 30px;
+    text-align: center;
+    font-size: 37px;
+    font-weight: 700;
+  }
+
+  &__description {
+    margin: 0 auto;
+    max-width: 550px;
+    text-align: center;
+    font-size: 20px;
+    color: #000000;
+    opacity: 0.6;
+  }
+}
+
+.loader {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 50vh;
+}
+
+.productId {
+  display: flex;
+  gap: 0 100px;
+
+  &__col1 {
+    flex: 0 0 30%;
+    display: flex;
+    flex-direction: column;
+  }
+
+  &__col2 {
+    display: flex;
+    flex-direction: column;
+  }
+
+  &__img {
+    flex: 1 1 100%;
+    margin: 0 auto;
+    position: relative;
+    width: 350px;
+    height: 350px;
+
+    img {
+      width: 100%;
+      height: 100%;
+      top: 0;
+      left: 0;
+      object-fit: cover;
+    }
+  }
+
+  &__title {
+    padding-bottom: 30px;
+
+    font-size: 50px;
+    font-weight: 600;
+  }
+
+  &__characteristicsList {
+    flex: 0 1 100%;
+
+    display: flex;
+    flex-direction: column;
+    gap: 5px 0;
+
+    padding-bottom: 20px;
+  }
+
+  &__characteristicItem {
+    font-size: 20px;
+    color: black;
+    opacity: 0.6;
+  }
+
+  &__button {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+
+  &__price {
+    white-space: nowrap;
+    font-size: 25px;
+    font-weight: 600;
+  }
+}
+
+.backButton {
+  padding-top: 30px;
+  display: flex;
+  justify-content: center;
+}
+
+@include desktop {
+  .productId {
+    gap: 0 30px;
+
+    &__col1 {
+      padding-bottom: 30px;
+      margin: 0 auto;
+    }
+
+    &__img {
+      max-height: 350px;
+      margin-bottom: 15px;
+    }
+
+    &__title {
+      font-size: 38px;
+    }
+
+    &__characteristicItem {
+      font-size: 16px;
+    }
+  }
+}
+
+@include laptop {
+  .productId {
+    flex-direction: column;
+
+    &__title {
+      text-align: center;
+    }
+
+    &__characteristicItem {
+      text-align: center;
+    }
+  }
+}
+
+@include tablet {
+  .productId {
+    &__title {
+      font-size: 36px;
+    }
+
+    &__characteristicItem {
+      font-size: 14px;
+    }
+
+    &__button {
+      flex-direction: column;
+      gap: 20px 0;
+    }
+  }
+
+  .backButton {
+    padding-top: 60px;
+  }
+}
+
+@include mobile {
+  .productId {
+    &__img {
+      width: 260px;
+      height: 260px;
+    }
+
+    &__price {
+      font-size: 22px;
+    }
+  }
+}

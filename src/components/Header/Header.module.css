@@ -1,0 +1,12 @@
+.header {
+  padding: 30px 0 15px 0;
+  box-shadow: 0px -5px 5px -5px rgba(2, 175, 209, 0.6) inset;
+}
+.header__row {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 0 150px;
+}
+
+/*# sourceMappingURL=Header.module.css.map */

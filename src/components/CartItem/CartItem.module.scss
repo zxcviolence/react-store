@@ -1,0 +1,122 @@
+@import '../../MainStyles/variables';
+
+.cartItem {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+
+  &__product {
+    flex: 0 0 40%;
+  }
+
+  &__count {
+  }
+
+  &__amount {
+    font-size: 20px;
+    font-weight: 500;
+  }
+}
+
+.product {
+  display: flex;
+  align-items: center;
+  gap: 0 5px;
+
+  &__img {
+    cursor: pointer;
+    position: relative;
+    width: 70px;
+    height: 70px;
+
+    img {
+      width: 100%;
+      height: 100%;
+      top: 0;
+      left: 0;
+      object-fit: cover;
+    }
+  }
+
+  &__col {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+  }
+
+  &__name {
+    font-size: 20px;
+    font-weight: 600;
+  }
+
+  &__configuration {
+    font-size: 16px;
+    font-weight: 400;
+    color: rgba(0, 0, 0, 0.6);
+  }
+}
+
+.count {
+  display: flex;
+  align-items: center;
+  gap: 0 10px;
+
+  &__number {
+    font-size: 20px;
+    font-weight: 500;
+  }
+}
+
+@include laptop {
+  .product {
+    &__img {
+      width: 60px;
+      height: 60px;
+    }
+
+    &__name {
+      font-size: 16px;
+    }
+
+    &__configuration {
+      font-size: 14px;
+    }
+  }
+}
+
+@include tablet {
+  .cartItem {
+    gap: 0 10px;
+
+    &__amount {
+      font-size: 14px;
+    }
+  }
+
+  .product {
+    &__img {
+      width: 45px;
+      height: 45px;
+    }
+
+    &__col {
+      gap: 5px;
+    }
+
+    &__name {
+      font-size: 12px;
+    }
+
+    &__configuration {
+      font-size: 10px;
+    }
+  }
+
+  .count {
+    gap: 0 5px;
+
+    &__number {
+      font-size: 14px;
+    }
+  }
+}

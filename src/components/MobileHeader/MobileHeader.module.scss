@@ -1,0 +1,57 @@
+@import '../../MainStyles/variables';
+
+.mobileHeader {
+  position: sticky;
+  z-index: 2;
+  top: 0;
+  background: white;
+
+  padding: 30px 0 15px 0;
+  box-shadow: 0px -5px 5px -5px rgba(2, 175, 209, 0.6) inset;
+
+  &__row {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 0 15px;
+  }
+
+  &__col {
+    display: flex;
+    gap: 0 25px;
+    align-items: center;
+  }
+
+  &__magnifier {
+    position: relative;
+    height: 32px;
+    width: 32px;
+    cursor: pointer;
+    border-radius: 5px;
+
+    img {
+      position: absolute;
+      width: 100%;
+      height: 100%;
+      left: 0;
+      top: 0;
+      object-fit: cover;
+    }
+
+    &:active {
+      background-color: darken($color-light-grey, 10%);
+    }
+  }
+
+  &__logo {
+    z-index: 3;
+  }
+}
+
+@include mobile {
+  .mobileHeader {
+    &__col {
+      gap: 0 15px;
+    }
+  }
+}

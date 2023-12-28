@@ -1,0 +1,32 @@
+$color-blue: #02afd1ff;
+$color-purple: #6a55a4ff;
+$color-light-grey: #f3f3f3ff;
+
+$breakpoint-xxl: 1200px;
+$breakpoint-xl: 900px;
+$breakpoint-md: 700px;
+$breakpoint-sm: 450px;
+
+@mixin desktop() {
+  @media (max-width: $breakpoint-xxl) {
+    @content;
+  }
+}
+
+@mixin laptop() {
+  @media (max-width: $breakpoint-xl) {
+    @content;
+  }
+}
+
+@mixin tablet() {
+  @media (max-width: $breakpoint-md) {
+    @content;
+  }
+}
+
+@mixin mobile() {
+  @media (max-width: $breakpoint-sm) {
+    @content;
+  }
+}

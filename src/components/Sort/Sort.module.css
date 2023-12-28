@@ -1,0 +1,63 @@
+.sort {
+  position: relative;
+}
+.sort__text {
+  font-size: 17px;
+  cursor: pointer;
+}
+.sort__text span {
+  border-bottom: 2px dashed #02afd1;
+}
+.sort__popup {
+  z-index: 2;
+  position: absolute;
+  right: 0;
+  margin-top: 15px;
+  background: #ffffff;
+  box-shadow: 0 0 5px 5px rgba(2, 175, 209, 0.25);
+  border-radius: 10px;
+  overflow: hidden;
+  padding: 10px 0;
+  animation-name: popup;
+  animation-duration: 0.3s;
+}
+.sort__list {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  cursor: pointer;
+}
+.sort__item {
+  padding: 10px;
+  font-size: 15px;
+}
+.sort__item:hover {
+  background-color: #f2f2f2;
+}
+.sort__item:active {
+  background-color: #ededed;
+}
+.sort__active {
+  background: linear-gradient(163deg, rgba(2, 175, 209, 0.35) 0%, rgba(106, 85, 164, 0.35) 100%);
+}
+
+@keyframes popup {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+@media (max-width: 700px) {
+  .sort__text {
+    font-size: 15px;
+  }
+}
+@media (max-width: 450px) {
+  .sort__text {
+    font-size: 15px;
+  }
+}
+
+/*# sourceMappingURL=Sort.module.css.map */

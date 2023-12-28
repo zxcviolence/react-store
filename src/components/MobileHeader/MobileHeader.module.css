@@ -1,0 +1,48 @@
+.mobileHeader {
+  position: sticky;
+  z-index: 2;
+  top: 0;
+  background: white;
+  padding: 30px 0 15px 0;
+  box-shadow: 0px -5px 5px -5px rgba(2, 175, 209, 0.6) inset;
+}
+.mobileHeader__row {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 0 15px;
+}
+.mobileHeader__col {
+  display: flex;
+  gap: 0 25px;
+  align-items: center;
+}
+.mobileHeader__magnifier {
+  position: relative;
+  height: 32px;
+  width: 32px;
+  cursor: pointer;
+  border-radius: 5px;
+}
+.mobileHeader__magnifier img {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  left: 0;
+  top: 0;
+  object-fit: cover;
+}
+.mobileHeader__magnifier:active {
+  background-color: #dadada;
+}
+.mobileHeader__logo {
+  z-index: 3;
+}
+
+@media (max-width: 450px) {
+  .mobileHeader__col {
+    gap: 0 15px;
+  }
+}
+
+/*# sourceMappingURL=MobileHeader.module.css.map */

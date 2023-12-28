@@ -1,0 +1,99 @@
+@import '../../../MainStyles/variables';
+
+.sizeSmall {
+  padding: 10px 10px;
+}
+
+.sizeMedium {
+  padding: 10px 30px;
+}
+
+.basketButton {
+  display: flex;
+  align-items: center;
+  position: relative;
+
+  background: transparent;
+  border-radius: 15px;
+
+  transition-duration: 0.2s;
+
+  border-width: 2px;
+  border-style: solid;
+  border-color: $color-blue;
+
+  &:hover {
+    background-color: darken(white, 5%);
+  }
+
+  &:active {
+    background-color: darken(white, 10%);
+  }
+
+  &__price {
+    color: black;
+    font-size: 16px;
+    white-space: nowrap;
+
+    padding-right: 10px;
+  }
+
+  &__row {
+    display: flex;
+    align-items: center;
+    gap: 0 5px;
+
+    border-left: black 1px solid;
+    padding-left: 10px;
+  }
+
+  &__img {
+    position: relative;
+    width: 30px;
+    height: 30px;
+
+    img {
+      width: 100%;
+      height: 100%;
+      top: 0;
+      left: 0;
+      object-fit: cover;
+    }
+  }
+
+  &__count {
+    color: black;
+    font-size: 16px;
+  }
+}
+
+@include tablet {
+  .basketButton {
+    &:hover {
+      background: none !important;
+    }
+
+    &:focus {
+      background-color: darken(white, 5%);
+    }
+  }
+}
+
+@include mobile {
+  .basketButton {
+    &__price {
+      font-size: 13px;
+      padding-right: 5px;
+    }
+
+    &__img {
+      width: 20px;
+      height: 20px;
+    }
+
+    &__count {
+      color: black;
+      font-size: 13px;
+    }
+  }
+}

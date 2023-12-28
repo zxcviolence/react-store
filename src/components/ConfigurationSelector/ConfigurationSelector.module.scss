@@ -1,0 +1,53 @@
+@import '../../MainStyles/variables';
+
+.configurationSelector {
+  display: flex;
+  flex-direction: column;
+  gap: 10px 0;
+
+  background: $color-light-grey;
+  border-radius: 15px;
+
+  padding: 10px;
+
+  &__list {
+    display: flex;
+  }
+
+  &__item {
+    flex: 1 1 100%;
+    text-align: center;
+    cursor: pointer;
+    padding: 10px 5px;
+    border-radius: 7px;
+    font-weight: 500;
+    transition: background-color 0.1s ease-in-out;
+
+    &:hover {
+      background-color: darken($color-light-grey, 5%);
+    }
+
+    &:active {
+      background-color: darken($color-light-grey, 7%);
+    }
+  }
+
+  &__active {
+    background: white;
+    box-shadow: 0 3px 8px 0 rgba(0, 0, 0, 0.2);
+  }
+}
+
+@include tablet {
+  .configurationSelector {
+    &__item {
+      &:hover {
+        background: white;
+      }
+
+      &:focus {
+        background-color: darken($color-light-grey, 5%);
+      }
+    }
+  }
+}

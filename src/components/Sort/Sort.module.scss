@@ -1,0 +1,77 @@
+@import '../../MainStyles/variables';
+
+.sort {
+  position: relative;
+
+  &__text {
+    font-size: 17px;
+    cursor: pointer;
+
+    span {
+      border-bottom: 2px dashed $color-blue;
+    }
+  }
+
+  &__popup {
+    z-index: 2;
+    position: absolute;
+    right: 0;
+    margin-top: 15px;
+    background: #ffffff;
+    box-shadow: 0 0 5px 5px rgba($color-blue, 0.25);
+    border-radius: 10px;
+    overflow: hidden;
+    padding: 10px 0;
+    animation-name: popup;
+    animation-duration: 0.3s;
+  }
+
+  &__list {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    cursor: pointer;
+  }
+
+  &__item {
+    padding: 10px;
+    font-size: 15px;
+
+    &:hover {
+      background-color: darken(white, 5%);
+    }
+
+    &:active {
+      background-color: darken(white, 7%);
+    }
+  }
+
+  &__active {
+    background: linear-gradient(163deg, rgba($color-blue, 0.35) 0%, rgba($color-purple, 0.35) 100%);
+  }
+}
+
+@keyframes popup {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+@include tablet {
+  .sort {
+    &__text {
+      font-size: 15px;
+    }
+  }
+}
+
+@include mobile {
+  .sort {
+    &__text {
+      font-size: 15px;
+    }
+  }
+}
